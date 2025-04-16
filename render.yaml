@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: google-reviews-api
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: GOOGLE_API_KEY
+        value: your-api-key-here
+      - key: GOOGLE_PLACE_ID
+        value: your-place-id-here
